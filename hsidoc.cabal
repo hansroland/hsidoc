@@ -19,7 +19,7 @@ maintainer:         rsx@bluewin.ch
 category:           Documentation
 extra-source-files: CHANGELOG.md
 
-library libhsi-doc
+library libhsidoc
     exposed-modules:  DiagramsTutorial
                       TriangleTemplate,
                       TriangleStruct,
