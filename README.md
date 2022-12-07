@@ -1,4 +1,4 @@
-# hsi-doc
+# hsidoc
 
 This repository contains the source code to create the diagrams for the HSI project.
 

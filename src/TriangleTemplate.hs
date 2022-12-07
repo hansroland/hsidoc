@@ -15,6 +15,7 @@ template textmap = (poly === strutY 1 === edges === strutY 1 === vertices)
   where
     node key color = text (textmap Map.! key) # fontSizeL 0.5 # fc black
             <> roundedRect 2 1 0.5 # fc color # named key
-    poly     = strutX 4 ||| node  1 lightblue
-    edges    = node 2  orange  ||| strutX 1 ||| node 3  orange ||| strutX 1 ||| node 4  orange
-    vertices = node 5 lightgreen ||| strutX 1 ||| node 6  lightgreen ||| strutX 1 ||| node 7 lightgreen
+    poly     = centerX $ node  1 lightblue
+    edges    = centerX $ hcat [node 2  orange, sp, node 3  orange, sp, node 4  orange]
+    vertices = centerX $ hcat [node 5 lightgreen, sp, node 6  lightgreen, sp, node 7 lightgreen]
+    sp       = strutX 1
