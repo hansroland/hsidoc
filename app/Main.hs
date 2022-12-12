@@ -10,6 +10,7 @@ import PostorderMultiple ( postorderMultiple )
 import PostorderSingle ( postorderSingle )
 import PreorderMultiple ( preorderMultiple )
 import PreorderSingle ( preorderSingle )
+import Halfspace (halfspace)
 
 import Diagrams.Backend.SVG.CmdLine ( mainWith )
 import System.Environment ( withArgs )
@@ -28,4 +29,6 @@ main = do
         mainWith preorderSingle
     withArgs ["-o PreorderMultiple.svg", "-w 400", "-h 400"] $
         mainWith preorderMultiple
+    withArgs ["-o Halfspace.svg", "-w 400", "-h 400"] $
+        mainWith halfspace
 

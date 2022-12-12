@@ -27,7 +27,8 @@ library libhsidoc
                       PostorderMultiple,
                       PostorderSingle,
                       PreorderMultiple,
-                      PreorderSingle
+                      PreorderSingle,
+                      Halfspace
 
 
     -- Modules included in this library but not exported.
