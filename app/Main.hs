@@ -11,6 +11,7 @@ import PostorderSingle ( postorderSingle )
 import PreorderMultiple ( preorderMultiple )
 import PreorderSingle ( preorderSingle )
 import Halfspace (halfspace)
+import Intersect (intersect)
 
 import Diagrams.Backend.SVG.CmdLine ( mainWith )
 import System.Environment ( withArgs )
@@ -31,4 +32,6 @@ main = do
         mainWith preorderMultiple
     withArgs ["-o Halfspace.svg", "-w 400", "-h 400"] $
         mainWith halfspace
+    withArgs ["-o Intersect.svg", "-w 400", "-h 400"] $
+        mainWith intersect
 

@@ -28,7 +28,8 @@ library libhsidoc
                       PostorderSingle,
                       PreorderMultiple,
                       PreorderSingle,
-                      Halfspace
+                      Halfspace,
+                      Intersect
 
 
     -- Modules included in this library but not exported.
@@ -42,6 +43,7 @@ library libhsidoc
                       diagrams-lib,
                       diagrams-svg,
                       diagrams-contrib,
+                      colour,
                       containers
 
     hs-source-dirs:   src
