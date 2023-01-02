@@ -18,20 +18,20 @@ import System.Environment ( withArgs )
 
 main :: IO ()
 main = do
-    withArgs ["-o TriangleGeom.svg", "-w 400", "-h 400"] $
+    withArgs ["-oTriangleGeom.svg", "-w 400", "-h 400"] $
         mainWith triangleGeom
-    withArgs ["-o TriangleHasse.svg", "-w 400", "-h 400"] $
+    withArgs ["-oTriangleHasse.svg", "-w 400", "-h 400"] $
         mainWith triangleStruct
-    withArgs ["-o PostorderSingle.svg", "-w 400", "-h 400"] $
+    withArgs ["-oPostorderSingle.svg", "-w 400", "-h 400"] $
         mainWith postorderSingle
-    withArgs ["-o PostorderMultiple.svg", "-w 400", "-h 400"] $
+    withArgs ["-oPostorderMultiple.svg", "-w 400", "-h 400"] $
         mainWith postorderMultiple
-    withArgs ["-o PreorderSingle.svg", "-w 400", "-h 400"] $
+    withArgs ["-oPreorderSingle.svg", "-w 400", "-h 400"] $
         mainWith preorderSingle
-    withArgs ["-o PreorderMultiple.svg", "-w 400", "-h 400"] $
+    withArgs ["-oPreorderMultiple.svg", "-w 400", "-h 400"] $
         mainWith preorderMultiple
-    withArgs ["-o Halfspace.svg", "-w 400", "-h 400"] $
+    withArgs ["-oHalfspace.svg", "-w 200", "-h 200"] $
         mainWith halfspace
-    withArgs ["-o Intersect.svg", "-w 400", "-h 400"] $
+    withArgs ["-oIntersect.svg", "-w 400", "-h 400"] $
         mainWith intersect
 
