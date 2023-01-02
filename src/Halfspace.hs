@@ -20,14 +20,17 @@ hPos = fromVertices posVert # strokeLoop
 
 -- labCircle :: String -> Diagram B
 labCircle :: String -> Colour Double -> Diagram B
-labCircle nm col = text nm # fontSizeL 0.04 # fc black
-      <> circle 0.04 # fc col
+labCircle nm col = text nm # fontSizeL 0.08 # fc black
+      <> circle 0.08 # fc col
 
 plus :: Diagram B
-plus = moveTo (0.33 ^& 0.5) $ labCircle "+" lightgreen
+plus = moveTo (0.33 ^& 0.5) $ labCircle "H+" lightgreen
 
 minus :: Diagram B
-minus = moveTo ((-0.15) ^& 0.5) $ labCircle "-" pink
+minus = moveTo ((-0.15) ^& 0.5) $ labCircle "H-" pink
+
+h0 :: Diagram B
+h0 = moveTo ((0.05) ^& 0.3) $ labCircle "H0" white
 
 line :: Diagram B
 line = (fromVertices $ (0.0 ^& 0) ~~  (0.2 ^&  1)) # fc black # lw thick
@@ -36,7 +39,7 @@ littleArrow :: Diagram B
 littleArrow =  arrowAt (0.1 ^&  0.5) (0.1 ^& (-0.02))
 
 halfspace :: Diagram B
-halfspace = plus <> minus <> line <> littleArrow <> hNeg <> hPos
+halfspace = plus <> minus <> h0 <> line <> littleArrow <> hNeg <> hPos
 
 main :: IO()
 main = mainWith halfspace
