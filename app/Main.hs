@@ -4,12 +4,9 @@
 
 module Main where
 
-import TriangleGeom(triangleGeom)
-import TriangleHasse(triangleStruct)
-import PostorderMultiple ( postorderMultiple )
-import PostorderSingle ( postorderSingle )
-import PreorderMultiple ( preorderMultiple )
-import PreorderSingle ( preorderSingle )
+import Hasse(hasse)
+import Preorder(preorder)
+import Postorder(postorder)
 import Halfspace (halfspace)
 import Intersect (intersect)
 
@@ -18,20 +15,14 @@ import System.Environment ( withArgs )
 
 main :: IO ()
 main = do
-    withArgs ["-oTriangleGeom.svg", "-w 400", "-h 400"] $
-        mainWith triangleGeom
-    withArgs ["-oTriangleHasse.svg", "-w 400", "-h 400"] $
-        mainWith triangleStruct
-    withArgs ["-oPostorderSingle.svg", "-w 400", "-h 400"] $
-        mainWith postorderSingle
-    withArgs ["-oPostorderMultiple.svg", "-w 400", "-h 400"] $
-        mainWith postorderMultiple
-    withArgs ["-oPreorderSingle.svg", "-w 400", "-h 400"] $
-        mainWith preorderSingle
-    withArgs ["-oPreorderMultiple.svg", "-w 400", "-h 400"] $
-        mainWith preorderMultiple
+    withArgs ["-oPostorder.svg", "-w 700", "-h 200"] $
+        mainWith postorder
+    withArgs ["-oPreorder.svg", "-w 700", "-h 200"] $
+        mainWith preorder
     withArgs ["-oHalfspace.svg", "-w 200", "-h 200"] $
         mainWith halfspace
-    withArgs ["-oIntersect.svg", "-w 400", "-h 400"] $
+    withArgs ["-oIntersect.svg", "-w 200", "-h 200"] $
         mainWith intersect
+    withArgs ["-oHasse.svg", "-w 700", "-h 200"] $
+        mainWith hasse
 
