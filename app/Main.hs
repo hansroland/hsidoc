@@ -4,6 +4,7 @@
 
 module Main where
 
+import HsiExamples
 import Hasse(hasse)
 import Preorder(preorder)
 import Postorder(postorder)
@@ -15,6 +16,8 @@ import System.Environment ( withArgs )
 
 main :: IO ()
 main = do
+    withArgs ["-ohsiexamples.svg", "-w 700", "-h 200"] $
+        mainWith hsiExamples
     withArgs ["-oPostorder.svg", "-w 700", "-h 200"] $
         mainWith postorder
     withArgs ["-oPreorder.svg", "-w 700", "-h 200"] $
