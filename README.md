@@ -2,6 +2,11 @@
 
 This repository contains the source code to create the diagrams for the HSI project.
 
+## This is just a test section
+
+<img src="./temp/okta1.svg"/>
+<img src="./temp/okta2.svg"/>
+
 ## Running the examples in GHCi
 
 * :set args -o diagrams.svg -w 400
