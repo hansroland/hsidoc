@@ -7,6 +7,7 @@ This repository contains the source code to create the diagrams for the HSI proj
 See: [https://stackoverflow.com/questions/11293026/default-background-color-of-svg-root-element](https://stackoverflow.com/questions/11293026/default-background-color-of-svg-root-element)
 
 <img src="./temp/okta2.svg"/>
+<img src="Preorder.svg"/>
 
 ## Running the examples in GHCi
 
