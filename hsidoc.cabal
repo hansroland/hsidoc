@@ -33,7 +33,9 @@ library libhsidoc
                       PreorderSingle,
                       Halfspace,
                       Intersect,
-                      HsiExamples
+                      HsiExamples,
+                      Algo01,
+                      Algo02
 
 
     -- Modules included in this library but not exported.
