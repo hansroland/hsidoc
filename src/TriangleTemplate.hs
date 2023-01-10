@@ -10,7 +10,7 @@ import qualified Data.IntMap as Map
 
 template :: Map.IntMap String -> Diagram B
 template textmap = (poly === strutY 1 === edges === strutY 1 === vertices)
-         # applyAll [connectOutside j k |
+         # applyAll [lc red (connectOutside j k) |
             (j,k) <- [(1,2), (1,3), (1,4), (2,5), (2,6), (3,5), (3,7), (4,6), (4,7)]:: [(Int,Int)]]
   where
     node key color = text (textmap Map.! key) # fontSizeL 0.5 # fc black
