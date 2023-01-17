@@ -35,7 +35,8 @@ library libhsidoc
                       Intersect,
                       HsiExamples,
                       Algo01,
-                      Algo02
+                      Algo02,
+                      Algo03
 
 
     -- Modules included in this library but not exported.
