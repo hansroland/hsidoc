@@ -35,6 +35,6 @@ main = do
         mainWith algo01
     withArgs ["-oAlgo02.svg", "-w 700", "-h 200"] $
         mainWith algo02
-    withArgs ["-oAlgo03.svg", "-w 300", "-h 200"] $
+    withArgs ["-oAlgo03.svg", "-w 700", "-h 200"] $
         mainWith algo03
 
