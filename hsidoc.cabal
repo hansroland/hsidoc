@@ -36,6 +36,8 @@ library libhsidoc
                       HsiExamples,
                       Algo01,
                       Algo02,
+                      Algo02G,
+                      Algo02H,
                       Algo03
 
 
