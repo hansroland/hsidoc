@@ -13,6 +13,7 @@ import Intersect (intersect)
 import Algo01 ( algo01 )
 import Algo02 ( algo02 )
 import Algo03 ( algo03 )
+import Algo04 ( algo04 )
 
 import Diagrams.Backend.SVG.CmdLine ( mainWith )
 import System.Environment ( withArgs )
@@ -37,4 +38,6 @@ main = do
         mainWith algo02
     withArgs ["-oAlgo03.svg", "-w 700", "-h 200"] $
         mainWith algo03
+    withArgs ["-oAlgo04.svg", "-w 700", "-h 200"] $
+        mainWith algo04
 
