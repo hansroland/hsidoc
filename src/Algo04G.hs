@@ -16,7 +16,7 @@ trail = polyTrail ( with
 
 -- The triangle as we know it from Geometry
 algo04g :: Diagram B
-algo04g = text "-0+" # fontSizeL 0.6 # fc black
+algo04g = text "-0+" # fontSizeL 0.6 # fc black # translateX 0.8
          <> vertices
          <> edges
          <> line
@@ -38,7 +38,7 @@ vertices = (atPoints (trailVertices trail) (map vertex1 [("+", 0.6), ("0", 0.6),
 
 -- The edges
 edges :: Diagram B
-edges = atPoints midpoints (map edgelabel [("0+",1.4, 0.7, 0.6),  ("-+",1.4, 0.7, 0.6), ("", 0.01, 0.01, 0.01)])
+edges = atPoints midpoints (map edgelabel [("0+",1.4, 0.7, 0.6),  ("-+ *",1.4, 0.7, 0.6), ("", 0.01, 0.01, 0.01)])
         <> atPoints cutpoints (map vertex2 [("", 0.01), ("0", 0.6), ("", 0.01)])
   where
     edgelabel :: (String, Double, Double, Double) -> Diagram B
@@ -52,7 +52,7 @@ edges = atPoints midpoints (map edgelabel [("0+",1.4, 0.7, 0.6),  ("-+",1.4, 0.7
 
 
 line :: Diagram B
-line = (fromVertices $ ((-2.07) ^&  (-1.2)) ~~  (1.285 ^&  2.1)) # lc red # lw thick
+line = (fromVertices $ ((-3.9) ^&  (-3)) ~~  (2.2 ^&  3)) # lc red # lw thick
 
 littleArrow :: Diagram B
 littleArrow =  arrowAt ((- 1.0) ^&  (-0.1)) (0.4 ^& (-0.4))

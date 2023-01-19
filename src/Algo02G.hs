@@ -18,7 +18,7 @@ trail = polyTrail ( with
 algo02g :: Diagram B
 algo02g = line
          <> littleArrow
-         <> text "-0+" # fontSizeL 0.6 # fc black
+         <> text "-0+" # fontSizeL 0.6 # fc black # translateX 0.8
          <> edges
          <> stroke trail # fc lightblue # lc orange # lw 3
 

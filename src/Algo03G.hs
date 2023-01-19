@@ -17,7 +17,7 @@ trail = polyTrail ( with
 -- The triangle as we know it from Geometry
 algo03g :: Diagram B
 algo03g = line
-         <> text "-0+" # fontSizeL 0.6 # fc black
+         <> text "-0+" # fontSizeL 0.6 # fc black # translateX 0.8
          <> littleArrow
          <> vertices
          <> edges
