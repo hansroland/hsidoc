@@ -14,6 +14,7 @@ import Algo01 ( algo01 )
 import Algo02 ( algo02 )
 import Algo03 ( algo03 )
 import Algo04 ( algo04 )
+import Algo05 ( algo05 )
 
 import Diagrams.Backend.SVG.CmdLine ( mainWith )
 import System.Environment ( withArgs )
@@ -40,4 +41,5 @@ main = do
         mainWith algo03
     withArgs ["-oAlgo04.svg", "-w 700", "-h 200"] $
         mainWith algo04
-
+    withArgs ["-oAlgo05.svg", "-w 700", "-h 200"] $
+        mainWith algo05

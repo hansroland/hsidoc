@@ -43,7 +43,10 @@ library libhsidoc
                       Algo03H
                       Algo04,
                       Algo04G,
-                      Algo04H
+                      Algo04H,
+                      Algo05,
+                      Algo05G,
+                      Algo05H
 
 
     -- Modules included in this library but not exported.
