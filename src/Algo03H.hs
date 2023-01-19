@@ -25,7 +25,7 @@ template textmap opamap = (poly === strutY 1 === edges === strutY 1 === vertices
 -- Define the labels for this drawing
 labels :: Map.IntMap String
 labels = Map.fromList
-        [(1,"-0+"), (2,"-0"), (3,"-+"), (4,"0+"), (5,"-"), (6,"0"), (7,"+")]
+        [(1,"-0+"), (2,"-0"), (3,"-+ *"), (4,"0+"), (5,"-"), (6,"0"), (7,"+")]
 
 opas :: Map.IntMap Double
 opas = Map.fromList
