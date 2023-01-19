@@ -52,7 +52,7 @@ edges = atPoints midpoints (map edgelabel [("0+",1.4, 0.7, 0.6),  ("-+",1.4, 0.7
 
 
 line :: Diagram B
-line = (fromVertices $ ((-3.9) ^&  (-3)) ~~  (2.2 ^&  3)) # lc red # lw thick
+line = (fromVertices $ ((-2.07) ^&  (-1.2)) ~~  (1.285 ^&  2.1)) # lc red # lw thick
 
 littleArrow :: Diagram B
 littleArrow =  arrowAt ((- 1.0) ^&  (-0.1)) (0.4 ^& (-0.4))
