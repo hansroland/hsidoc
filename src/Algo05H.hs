@@ -14,14 +14,14 @@ template textmap  = (poly === strutY 1 === edges === strutY 1 === vertices)
             (j,k) <- [(1,3), (1,4), (3,5), (3,7), (4,6), (4,7)]:: [(Int,Int)]]
          # applyAll [lw 3 (lc yellow (connectOutside j k)) |
             (j,k) <- [(3,5)]:: [(Int,Int)]]
-         # applyAll [lw 4 (lc cyan (connectOutside j k)) |
+         # applyAll [lw 4 (lc blue (connectOutside j k)) |
             (j,k) <- [(1,2), (2,5), (2,6)]:: [(Int,Int)]]
 
   where
     node key color = text (textmap Map.! key) # fontSizeL 0.5 # fc black
             <> roundedRect 2 1 0.5 # fc color # named key
     poly     = centerX $ node  1 lightblue
-    edges    = centerX $ hcat [node 2 cyan, sp, node 3 orange, sp, node 4  orange]
+    edges    = centerX $ hcat [node 2 blue, sp, node 3 orange, sp, node 4  orange]
     vertices = centerX $ hcat [node 5 yellow, sp, node 6 lightgreen, sp, node 7 lightgreen]
     sp       = strutX 1
 

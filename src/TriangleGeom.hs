@@ -1,41 +1,23 @@
 {-# LANGUAGE NoMonomorphismRestriction #-}
 {-# LANGUAGE FlexibleContexts          #-}
-{-# LANGUAGE TypeFamilies              #-}
 
 module TriangleGeom (triangleGeom) where
+
+import GeomTemplate
 
 import Diagrams.Prelude
 import Diagrams.Backend.SVG.CmdLine
 
--- triapoly :: Diagram B
-trail :: (Floating n, Ord n) => Located (Trail V2 n)
-trail = polyTrail ( with
-        & polyType .~ PolySides
-            [80@@ deg, 30@@deg ]
-            [4, 7] )
+verts1 = [("A", 0.6, lightgreen ), ("B", 0.6, lightgreen), ("C", 0.6, lightgreen)]
 
--- The triangle as we know it from Geometry
+edges1 = edges trail1 edglabs1
+
+edglabs1 = [("c",1.4, 0.7, 0.6),  ("b",1.4, 0.7, 0.6), ("a", 1.4, 0.7, 0.6)]
+
 triangleGeom :: Diagram B
-triangleGeom = text "T" # fontSizeL 0.6 # fc black
-         <> edges
-         <> stroke trail # fc lightblue # lc orange # lw 3
-
--- A single vertex
-vertex :: String -> Diagram B
-vertex nm = text nm # fontSizeL 0.6 # fc black
-      <> circle 0.6 # fc lightgreen  # named nm
-
--- The edges
-edges :: Diagram B
-edges = atPoints midpoints (map edgelabel ["c", "b", "a"]) <>
-        (atPoints (trailVertices trail) (map vertex ["A", "B", "C"]))
-  where
-    edgelabel :: String -> Diagram B
-    edgelabel nm = text nm # fontSizeL 0.6 # fc orange
-        <> square 0.7 # fc white # named nm # lc orange
-    midpoints :: (Floating n, Ord n) => [Point V2 n]
-    midpoints = [(x + y) / 2 | x <- points, y <- points, x < y]
-    points = trailVertices trail
+triangleGeom = text "T" # fontSizeL 0.6 # fc black # translateX 1.2
+   <> edges1
+   <> vertices trail1 verts1 <> stroke trail1 # lc orange # lw 3 # fc lightblue
 
 main :: IO ()
 main = mainWith $ triangleGeom
