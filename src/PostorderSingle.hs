@@ -4,7 +4,7 @@
 
 module PostorderSingle (postorderSingle) where
 
-import TriangleTemplate(template)
+import HasseTemplate(template)
 
 import Diagrams.Prelude
 import Diagrams.Backend.SVG.CmdLine

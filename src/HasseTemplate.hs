@@ -2,7 +2,7 @@
 {-# LANGUAGE FlexibleContexts          #-}
 {-# LANGUAGE TypeFamilies              #-}
 
-module TriangleTemplate (template) where
+module HasseTemplate (template) where
 
 import Diagrams.Prelude
 import Diagrams.Backend.SVG.CmdLine ( B, mainWith )

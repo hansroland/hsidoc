@@ -4,7 +4,7 @@
 
 module Algo02H (algo02h) where
 
-import TriangleTemplate(template)
+import HasseTemplate(template)
 
 import Diagrams.Prelude
 import Diagrams.Backend.SVG.CmdLine
